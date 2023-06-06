@@ -28,5 +28,5 @@ is_publish:{
 }
 
 },{timestamps:true});
-const post = mongoose.model1("post",postschema);
+const post = mongoose.model("post",postschema);
 module.exports = post;

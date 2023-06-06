@@ -9,7 +9,7 @@ const UserSchema = new mongoose.Schema({
         type:String,
         required:[true,"last name is required "]
     },
-    femail:{
+    email:{
         type:String,
         lowecase:true,
         trim:true,
@@ -29,5 +29,5 @@ const UserSchema = new mongoose.Schema({
         default:""
     },
 },{timestamps:true});
-const User = new mongoose.model1("User",UserSchema);
+const User = new mongoose.model("User",UserSchema);
 module.exports = User;

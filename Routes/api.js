@@ -1,13 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const {createCayegory} = require("../Controller/CategoryController")
-//define all routes here
-// router.get("/test",(req,res)=>{
-//     res.json({
-//         status:true,
-//         message:"the route is working"
-//     })
-// })
-router.post("/store/category,createcategory")
+const {userCreate, userUpdate, userFindAll, userDelete} = require("../Controller/UserController");
+const {createCategory} = require("../Controller/CategoryController")
+
+// Category Routes
+router.post("/user", userCreate)
+router.post("/user/update/:id", userUpdate)
+router.get("/users", userFindAll)
+router.delete("/delete/user/:id", userDelete)
+
 
 module.exports = router;

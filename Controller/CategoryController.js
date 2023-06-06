@@ -24,10 +24,16 @@ const getAllCategories = async (req,res)=>{
     let categories = await category.find({});
     res.json({
         success:false,
-        message:"category fetched scuessfully"
+        message:"category fetched scuessfully",
         data:categories
     })
     const updateCategory = async (req,res)=>{
-        await Category.findByidAndUpdate
+        await Category.findByidAndUpdate(req.body.id,{
+            categoryName:req.body.categoryName.toLowerCase()
+        });
+        res.json({
+            success:true,
+            message:"category deleted scccessfully"
+        });    
     }
 }
